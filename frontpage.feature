@@ -1,27 +1,27 @@
 Feature:
 	As a newbie user
 	I want to check out the front page
-	So that I can see what reddit is like in general
+	So that I can see what reddit is like before signing up
 
 	Scenario:
-		Given the user is on the front page
+		Given I am on the front page
 		Then the title should say that reddit is the front page of the internet
 
 	Scenario:
-		Given the user is on the front page
+		Given I am on the front page
 		Then there should be multiple content links to click on
 
 	Scenario:
-		Given the user is on the front page
-		When they click the sign up link
-		Then a registration form should appear
+		Given I am on the front page
+		When I click the sign up link
+		Then I should see a registration form
 
 	Scenario:
-		Given the user is on the front page
+		Given I am on the front page
 		And there is at least one link
-		When they go to the comments section of the link
-		Then there should be comments there
+		When I go to the comments section of the link
+		Then there should be comments
 
 	Scenario:
-		When the user clicks on the alien image in the header
-		Then they should be taken back to the front page
+		When I click on the alien image in the header
+		Then I should be taken back to the front page

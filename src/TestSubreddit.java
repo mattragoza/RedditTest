@@ -25,8 +25,8 @@ public class TestSubreddit
 	
 	/*
  		Given a particular subreddit that exists
-	 	When the user accesses that subreddit's URL
-	 	Then the page should have the subreddit's name in the title bar
+	 	When I access that subreddit's URL
+	 	Then I should see the subreddit's name in the title bar
 	 */
 	@Test
 	public void testSubredditAccessByURL()
@@ -37,11 +37,11 @@ public class TestSubreddit
 	}
 
 	/*
-	 	Given the user is on the front page
-		And a particular subreddit that exists
-		When the user enters the subreddit name in the search bar
-		And they click the first search result
-		Then the page should have the subreddit's name in the title bar
+	 	Given I am on the front page
+		And a particular subreddit exists
+		When I enter that subreddit name in the search bar
+		And then click the first search result
+		Then I should see the subreddit's name in the title bar
 	 */
 	@Test
 	public void testSubredditAccessBySearch()
@@ -54,7 +54,7 @@ public class TestSubreddit
 			search.findElement(By.name("q")).sendKeys("Youtube Haiku\n");
 		
 			WebElement result = driver.findElement(By.className("search-result"));
-			result.findElement(By.tagName("a")).click();
+			result.findElement(By.className("search-title")).click();
 		
 			String title = driver.getTitle();
 			assertEquals(title, "Youtube Haiku");
@@ -66,9 +66,9 @@ public class TestSubreddit
 	}
 
 	/*
-		Given the user is in a subreddit
-		When they click the wiki tab
-		Then a wiki should be displayed for the subreddit
+		Given I am in a subreddit
+		When I click the wiki tab
+		Then I should see a wiki about the subreddit
 	 */
 	@Test
 	public void testSubredditWiki()
@@ -87,9 +87,9 @@ public class TestSubreddit
 	}
 	
 	/*
-		Given the user is in a subreddit
-		When they click the search bar
-		Then there should be an option to restrict the search to that subreddit
+		Given I am in a subreddit
+		When I click the search bar
+		Then I should have the option to restrict the search to that subreddit
 	 */
 	@Test
 	public void testSubredditSearchSubreddit()
@@ -109,7 +109,7 @@ public class TestSubreddit
 	}
 
 	/*
-		Given the user is in a subreddit
+		Given I am in a subreddit
 		Then there should be a link to send a message to the moderators
 	 */
 	@Test

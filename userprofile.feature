@@ -10,7 +10,7 @@ Feature:
 
 	Scenario:
 		Given another reddit user that exists
-		And they have not blocked the user
+		And they have not blocked this user
 		When the user accesses the other user's profile
 		There should be a link to send them a private message
 

@@ -11,7 +11,7 @@ import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 /*
 	As a newbie user
 	I want to check out the front page
-	So that I can see what reddit is like in general
+	So that I can see what reddit is like before signing up
  */
 
 public class TestFrontPage
@@ -24,7 +24,7 @@ public class TestFrontPage
 	}
 	
 	/*
-		Given the user is on the front page
+		Given I am on the front page
 		Then the title should say that reddit is the front page of the internet
 	 */
 	@Test
@@ -36,7 +36,7 @@ public class TestFrontPage
 	}
 
 	/*
-		Given the user is on the front page
+		Given I am on the front page
 		Then there should be multiple content links to click on
 	 */
 	@Test
@@ -55,9 +55,9 @@ public class TestFrontPage
 	}
 
 	/*
-		Given the user is on the front page
-		When they click the sign up link
-		Then a registration form should appear
+		Given I am on the front page
+		When I click the sign up link
+		Then I should see a registration form
 	 */
 	@Test
 	public void testFrontPageSignUpForm()
@@ -77,10 +77,10 @@ public class TestFrontPage
 	}
 	
 	/*
-		Given the user is on the front page
+		Given I am on the front page
 		And there is at least one link
-		When they go to the comments section of the link
-		Then there should be comments there
+		When I go to the comments section of the link
+		Then there should be comments
 	 */
 	@Test
 	public void testFrontPageComments()
@@ -99,8 +99,8 @@ public class TestFrontPage
 	}
 	
 	/*
-		When the user clicks on the alien image in the header
-		Then they should be taken back to the front page
+		When I click on the alien image in the header
+		Then I should be taken back to the front page
 	 */
 	@Test
 	public void testFrontPageAlienLink()
